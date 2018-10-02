@@ -1,0 +1,30 @@
+import org.junit.Test;
+
+import junit.framework.Assert;
+
+import static org.junit.Assert.*;
+
+public class FindMinOfArrayTest {
+
+
+    @Test
+    public void findMinOfArray() {
+        int [] arr1 = {1, 3, 2 -4, -5};
+        int [] arr2 = {1, Integer.MIN_VALUE, 2 -4, -5};
+        int [] arr3 = {1, 3, 2 -4, Integer.MAX_VALUE};
+        int [] arr4 = {1, 10, 2 -4, -5};
+        int [] arr5 = {1, -9, 2 -4, -5};
+        try {
+
+
+            assertEquals("Fail number are not equals", -5, FindMinOfArray.findMinOfArray(arr1));
+            assertEquals("Fail number are not equals", Integer.MIN_VALUE, FindMinOfArray.findMinOfArray(arr2));
+            assertEquals("Fail number are not equals",10, FindMinOfArray.findMinOfArray(arr3));
+            assertEquals("Fail number are not equals",-5, FindMinOfArray.findMinOfArray(arr4));
+            assertEquals("Fail number are not equals",-9, FindMinOfArray.findMinOfArray(arr5));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+}
